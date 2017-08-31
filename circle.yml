@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: wget https://github.com/spf13/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.tar.gz
       - run: tar -xzf hugo_0.26_Linux-64bit.tar.gz
-      - run: sudo mv hugo_0.26_linux_amd64/hugo_0.26_linux_amd64 /usr/local/bin/hugo
+      - run: sudo mv hugo /usr/local/bin
       - run: npm install --global firebase-tools
       - deploy:
           name: Deploy to Firebase if branch is Master
