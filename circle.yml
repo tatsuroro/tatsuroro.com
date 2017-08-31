@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.4.0
+    steps:
+      - checkout
+      - run: wget https://github.com/spf13/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.tar.gz
+      - run: tar -xzf hugo_0.26_Linux-64bit.tar.gz
+      - run: sudo mv hugo_0.26_linux_amd64/hugo_0.19_linux_amd64 /usr/local/bin/hugo
+      - run: npm install --global firebase-tools
+      - deploy:
+          name: Deploy to Firebase if branch is Master
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              hugo
+              firebase --project tatsuroro-com --token $FIREBASE_TOKEN deploy
+            else
+              echo "Not master branch so not deploying"
+            fi
