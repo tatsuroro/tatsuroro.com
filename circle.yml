@@ -2,27 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.4.0
+      - image: devillex/docker-firebase
     steps:
       - checkout
       - run: wget https://github.com/spf13/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.tar.gz
       - run: tar -xzf hugo_0.26_Linux-64bit.tar.gz
-      - run: sudo mv hugo /usr/local/bin
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
       - deploy:
           name: Deploy to Firebase if branch is Master
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              hugo
-              ./node_modules/.bin/firebase --project tatsuroro-com --token $FIREBASE_TOKEN deploy
+              ./hugo
+              firebase --project tatsuroro-com --token $FIREBASE_TOKEN deploy
             else
               echo "Not master branch so not deploying"
             fi
