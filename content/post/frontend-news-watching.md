@@ -2,6 +2,7 @@
 title: "フロントエンドの適材適所と、エンジニアは何を学ぶべきか"
 date: 2017-09-01T12:09:22+09:00
 description: Frontend news watching
+tags: ['frontend']
 ---
 
 弊社ものづくりブログに記事を書きました。
