@@ -8,6 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "hugo",
+    "deploy": "firebase --project tatsuroro-com --token $FIREBASE_TOKEN deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

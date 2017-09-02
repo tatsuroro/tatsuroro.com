@@ -2,17 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: devillex/docker-firebase
+      - image: tatsuroro/docker-hugo-firebase
     steps:
       - checkout
-      - run: wget https://github.com/spf13/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.tar.gz
-      - run: tar -xzf hugo_0.26_Linux-64bit.tar.gz
       - deploy:
           name: Deploy to Firebase if branch is Master
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ./hugo
-              firebase --project tatsuroro-com --token $FIREBASE_TOKEN deploy
+              npm run build && npm run deploy
             else
               echo "Not master branch so not deploying"
             fi
