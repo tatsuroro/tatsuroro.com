@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "http://tatsuroro.com/"
+baseURL = "https://tatsuroro.com/"
 languageCode = "ja-JP"
 title = "tatsuroro.com"
 theme = "hugo-theme-cactus-plus"
