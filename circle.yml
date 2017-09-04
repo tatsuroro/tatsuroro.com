@@ -5,6 +5,9 @@ jobs:
       - image: tatsuroro/docker-hugo-firebase
     steps:
       - checkout
+      - run: |
+          git submodule sync
+          git submodule update --init
       - deploy:
           name: Deploy to Firebase if branch is Master
           command: |
