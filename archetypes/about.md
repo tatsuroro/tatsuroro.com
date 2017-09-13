@@ -1,9 +1,6 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-tags = ["blog"]
-isCJKLanguage: true
-showComments: true
 draft: true
 ---
 

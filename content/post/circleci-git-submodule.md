@@ -3,6 +3,7 @@ title: "Circle CI で Git submodule を Clone する（Circle CI ver.2.0)"
 date: 2017-09-04T20:33:27+09:00
 description: Circleci Git Submodule
 tags: ['circle ci', 'blog']
+showComments: true
 ---
 
 - ブログでアウトプットする習慣をつくろうと思い、手始めに構成を変えた
