@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-tags = ["blog"]
+tags: ['frontend']
 isCJKLanguage: true
 showComments: true
 draft: true
