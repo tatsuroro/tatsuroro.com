@@ -4,7 +4,6 @@ date: 2017-12-19T19:11:28+09:00
 tags: ['boostnote' , 'vim']
 isCJKLanguage: true
 showComments: true
-draft: true
 ---
 
 理想のメモアプリを求めてしばらくさまよっていた。Bear みたくクラウドで同期できて、Simplenote みたく無料で使えて、Vim みたく Vim キーバインドで書けるアプリを探してて、もう作ろうかと思っていたら Boostnote に出会った（遅まきながら)
