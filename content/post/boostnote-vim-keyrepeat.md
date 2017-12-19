@@ -1,7 +1,7 @@
 ---
 title: "Boostnote の Vim keymap 時にキーリピートを有効にする"
 date: 2017-12-19T19:11:28+09:00
-tags: ['frontend']
+tags: ['boostnote' , 'vim']
 isCJKLanguage: true
 showComments: true
 draft: true
