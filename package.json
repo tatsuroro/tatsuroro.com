@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "firebase-tools": "^3.9.2"
+    "firebase-tools": "^3.19.3"
   },
   "devDependencies": {},
   "scripts": {
